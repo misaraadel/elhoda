@@ -1,0 +1,546 @@
+@import 'global';
+@import 'animations';
+.navbar{
+    width: 100%;
+    padding: 15px 0px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transition: all .4s linear;
+
+    &.scrolled{
+        padding: 5px 0px;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px rgba($color: #917126 , $alpha: .2);
+
+        .brand-name img{
+            height: 60px;
+        }
+
+        .nav-item .nav-link{
+            color: #282828 !important;
+
+            &.active , &:hover{
+                color: #917126 !important;
+            }
+        }
+
+        .hamburger{
+            .line{
+                background-color: #917126 !important;
+            }
+        }
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+
+        .hamburger{
+            display: none;
+
+            .line{
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                display: block;
+                margin: 8px auto;
+                transition: all 0.3s ease-in-out;
+            }
+
+            &.active{
+                transition: all 0.3s ease-in-out;
+                transition-delay: 0.6s;
+                transform: rotate(45deg);
+                
+                .line{
+                    &:nth-child(2){
+                        width: 0px;
+                    }
+
+                    &:nth-child(3), 
+                    &:nth-child(1){
+                        transition-delay: 0.3s;
+                    }
+
+                    &:nth-child(1){
+                        transform: translateY(6.5px);
+                    }
+
+                    &:nth-child(3){
+                        transform: translateY(-15px) rotate(90deg);
+                    }
+                }
+            }
+        }
+
+        .brand-name{
+            img{
+                width: 120px;
+                height: 100px;
+                object-fit: contain;
+                transition: all .4s linear;
+            }
+        }
+
+        .navbar-nav{
+            flex-direction: row;
+
+            .nav-item{
+                margin: 0px 10px;
+
+                .nav-link{
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 2rem;
+                    &.active , &:hover{
+                        color: #282828;
+                    }
+                }
+            }
+        }
+    }
+}
+
+header{
+    width: 100%;
+    padding: 230px 0px 100px; 
+    background: linear-gradient(-180deg , #917126 , #282828 );
+    position: relative;
+    z-index: 99;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('../images/pattern.png') center/cover no-repeat;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: .15;
+    }
+
+    .owl-item,
+    .owl-stage,
+    .owl-stage-outer,
+    .owl-carousel,
+    .item{ 
+        width: 100%;
+        height: 100%;
+    }
+
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h4{
+            color: #fff;
+            font-size: 30px;
+            font-weight: 900;
+            line-height: 30px;
+            margin: 0px;
+        }
+        p{
+            color: #f9f9f9;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 2rem;
+            margin: 20px 0px;
+            text-align: justify;
+        }
+
+        .custom-btn{
+            border: 1px solid #fff !important;
+            background-color: #fff !important;
+            color: #917126 !important;
+
+            &::after , &::before{
+                background-color: #917126 !important;
+            }
+
+            &:hover{
+                color: #fff !important;
+            }
+        }
+    }
+
+    .image-content{
+        width: 100%;
+        height: 390px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
+    }
+
+    .owl-theme .owl-dots .owl-dot span , 
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span{
+        background-color: #fff !important;
+    }
+
+    .owl-theme .owl-dots{
+        display: flex;
+    }
+}
+
+.about-us{
+    width: 100%;
+    padding: 80px 0px 80px 0px;
+    background-color: #fff;
+    overflow: hidden;
+
+    .content{
+        .heading{
+            margin-bottom: 0px !important;
+            h4{
+                margin: unset !important;
+            }
+        }
+
+        p{
+            color: #282828;
+            font-size: 15px;
+            font-weight: 400;
+            text-align: justify;
+            line-height: 2rem;
+            margin: 20px 0px;
+        }
+    }
+
+    .carousel-content{
+        width: 100%;
+        margin-right: 20%;
+
+        .item{
+            img{
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 0px 20px 20px 0px;
+            }
+        }
+        .owl-nav{
+            position: absolute;
+            margin: 0px;
+            bottom: 0px;
+            right: 0px;
+            z-index: 9999;
+            display: flex;
+
+            button{
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                background: #fff !important;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-content: center;
+                box-shadow: 0px 0px 10px rgba($color: #917126 , $alpha: .2);
+
+                i{
+                    color: #917126;
+                    font-size: 20px;
+                }
+
+                &:hover{
+                    background: #917126 !important;
+
+                    i{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category{
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding: 80px 0px;
+    z-index: 9;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('../images/pattern.png') center/cover no-repeat;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        opacity: .15;
+    }  
+
+    .nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border: 0px;
+
+        .nav-item{
+            margin: 10px 10px;
+
+            .nav-link{
+                width: 163px;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: #f8f8f8;
+                border: 0px !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+
+                img{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: contain;
+                    margin-bottom: 20px;
+                    filter: invert(40%) sepia(79%) saturate(375%) hue-rotate(4deg) brightness(95%) contrast(92%);
+                }
+
+                span{
+                    color: #917126;
+                    font-size: 16px;
+                    font-weight: 900;
+                }
+
+                &.active , &:hover{
+                    background-color: #917126;
+                    img{
+                        filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(348deg) brightness(102%) contrast(105%);
+                        animation: tada .4s both;
+                    }
+
+                    span{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .desc{
+        color: #181818;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .image-content{
+        width: 100%;
+        height: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.objectives{
+    width: 100%;
+    padding: 80px 0px 40px 0px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+
+    .content{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .heading{
+            h4{
+                margin: unset;
+            }
+        }
+
+        p{
+            color: #181818;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 2rem;
+            margin: 0px;
+        }
+    }
+    .image-content{
+        width: 100%;
+        height: 500px;
+        margin-right: 23%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: bottom;
+        }
+    }
+}
+
+.people-say{
+    width: 100%;
+    padding: 50px 0px;
+    background-color: rgba($color: #917126 , $alpha: .06);
+    position: relative;
+    z-index: 9;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url('../images/pattern_2.png') bottom/contain repeat-x;
+        bottom: 0;
+        left: 0;
+        opacity: .1;
+        z-index: -1;
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+
+        h5{
+            color: #917126;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 0px;
+        }
+
+        p{
+            color: #282828;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 2rem;
+            margin: 40px 0px;
+        }
+    }
+}
+
+.contact-us{
+    width: 100%;
+    padding: 80px 0px 60px 0px;
+    background-color: #fff;
+
+    .box{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 20px 15px;
+        background-color: #f8f8f8;
+        text-align: center;
+        height: 100%;
+        position: relative;
+        z-index: 99;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background-color: #917126;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: all .3s linear;
+        }
+
+        .image-content{
+            img{
+                width: 80px;
+                height: 80px;
+                object-fit: contain;
+                margin-bottom: 20px;
+                filter: invert(45%) sepia(8%) saturate(3388%) hue-rotate(4deg) brightness(97%) contrast(91%);
+            }
+        }
+
+        .content{
+            h4{
+                color: #917126;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            p{
+                color: #282828;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        &:hover{
+            img{
+                animation: tada .4s linear;
+                filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(348deg) brightness(102%) contrast(105%);
+            }
+
+            h4{
+                color: #fff;
+            }
+
+            p{
+                color: #f8f8f8;
+            }
+
+            &::after{
+                height: 100%;
+            }
+        }
+    }
+}
+
+.copyrights{
+    width: 100%;
+    padding: 20px 0px;
+    background-color: #181818;
+
+    p{
+        text-align: center;
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;
+    }
+}
+
+@import 'media';
