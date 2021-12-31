@@ -1541,6 +1541,9 @@ header .owl-theme .owl-dots {
   .navbar .navbar-nav.active-nav {
     right: 0px !important;
   }
+  .navbar .navbar-nav .nav-item .nav-link {
+    color: #000 !important;
+  }
   .about-us .carousel-content, .objectives .image-content {
     margin: 0px !important;
   }
