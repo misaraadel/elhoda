@@ -69,7 +69,7 @@ $(document).ready(function () {
         ],
     });
 
-    $('.owl-partner').owlCarousel({
+    $('.owl-gallery').owlCarousel({
         rtl: true,
         loop:false,
         margin: 20,
@@ -95,7 +95,7 @@ $(document).ready(function () {
                 items:2
             },
             1000:{
-                items:5
+                items:4
             }
         }
     });
