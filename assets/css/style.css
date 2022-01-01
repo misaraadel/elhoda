@@ -1557,11 +1557,21 @@ header .owl-theme .owl-dots {
     height: 300px !important;
   }
   header {
-    padding: 124px 0px 0px !important;
+    padding-top: 0px !important;
   }
   header .image-content img {
     -o-object-position: bottom !important;
        object-position: bottom !important;
+  }
+  header .order-mobile-0 {
+    -webkit-box-ordinal-group: 1 !important;
+        -ms-flex-order: 0 !important;
+            order: 0 !important;
+  }
+  header .order-mobile-1 {
+    -webkit-box-ordinal-group: 2 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
   }
   .category .nav .nav-item .nav-link {
     width: 151px !important;

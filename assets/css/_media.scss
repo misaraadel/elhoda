@@ -51,10 +51,18 @@
     }
 
     header{
-        padding: 124px 0px 0px !important;
+        padding-top: 0px !important;
 
         .image-content img{
             object-position: bottom !important;
+        }
+
+        .order-mobile-0{
+            order: 0 !important;
+        }
+
+        .order-mobile-1{
+            order: 1 !important;
         }
     }
 
