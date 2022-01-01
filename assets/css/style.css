@@ -995,6 +995,7 @@ header {
   background: linear-gradient(-180deg, #917126, #282828);
   position: relative;
   z-index: 99;
+  overflow: hidden;
 }
 
 header::after {
@@ -1177,6 +1178,7 @@ header .owl-theme .owl-dots {
   position: relative;
   padding: 80px 0px;
   z-index: 9;
+  overflow: hidden;
 }
 
 .category::after {
@@ -1359,6 +1361,7 @@ header .owl-theme .owl-dots {
   background-color: rgba(145, 113, 38, 0.06);
   position: relative;
   z-index: 9;
+  overflow: hidden;
 }
 
 .people-say::after {
@@ -1412,6 +1415,7 @@ header .owl-theme .owl-dots {
   width: 100%;
   padding: 80px 0px 60px 0px;
   background-color: #fff;
+  overflow: hidden;
 }
 
 .contact-us .box {
