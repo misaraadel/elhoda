@@ -109,40 +109,42 @@
 }
 
 header{
-    width: 100%;
-    padding: 230px 0px 100px; 
-    background: linear-gradient(-180deg , #917126 , #282828 );
-    position: relative;
-    z-index: 99;
-    overflow: hidden;
-
-    &::after{
-        content: '';
-        position: absolute;
+    .item{
         width: 100%;
-        height: 100%;
-        background: url('../images/pattern.png') center/cover no-repeat;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        opacity: .15;
-    }
+        padding: 230px 0px 100px;
+        position: relative;
+        z-index: 99;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
 
-    .owl-item,
-    .owl-stage,
-    .owl-stage-outer,
-    .owl-carousel,
-    .item{ 
-        width: 100%;
-        height: 100%;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: .5);
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     }
-
     .content{
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        img{
+            width: 120px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 25px;
+        }
         h4{
             color: #fff;
             font-size: 30px;
@@ -174,17 +176,6 @@ header{
         }
     }
 
-    .image-content{
-        width: 100%;
-        height: 390px;
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: left;
-        }
-    }
-
     .owl-theme .owl-dots .owl-dot span , 
     .owl-theme .owl-dots .owl-dot.active span,
     .owl-theme .owl-dots .owl-dot:hover span{
@@ -193,6 +184,22 @@ header{
 
     .owl-theme .owl-dots{
         display: flex;
+    }
+}
+
+.sub-header{
+    width: 100%;
+    padding: 150px 0px 50px;
+    background-color: #917126;
+
+    .heading{
+        h4{
+            color: #fff;
+
+            &::After , &::before{
+                background: #fff !important;
+            }
+        }
     }
 }
 
@@ -408,6 +415,47 @@ header{
     }
 }
 
+.hotels{
+    width: 100%;
+    padding: 40px 0px;
+    background-color: rgba($color: #917126 , $alpha: .05);
+
+    .box{
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background-color: #fff;
+        transition: all .4s linear;
+
+        &:hover{
+            transform: translateY(-10px);
+        }
+        img{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .content{
+            width: 100%;
+            padding: 20px 10px;
+            text-align: center;
+
+            h4{
+                color: #000;
+                font-size: 20px;
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+
+            .custom-btn{
+                width: 100%;
+            }
+        }
+    }
+}
+
 .gallery{
     width: 100%;
     padding: 60px 0px;
@@ -554,6 +602,73 @@ header{
 
             &::after{
                 height: 100%;
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 10px 0px;
+    background-color: #333;
+
+    .content{
+        img{
+            width: 120px;
+            height: 100px;
+            object-position: center;
+            object-fit: contain;
+        }
+
+        p{
+            color: #fff;
+            margin: 20px 0px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 2rem;
+        }
+
+        h4{
+            color: #917126;
+            font-size: 20px;
+            padding: 55px 0px;
+            font-weight: 900;
+        }
+
+        .link{
+            li{
+                margin-bottom: 29px;
+                a{
+                    font-size: 15px;
+                    color: #fff;
+                }
+            }
+        }
+
+        .socail-media{
+            display: flex;
+            align-items: center;
+            align-content: center;
+
+            li{
+                margin: 0px 0px 0px 15px;
+                
+                a{
+                    width: 50px;
+                    height: 50px;
+                    background-color: #917126;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    img{
+                        width: 27px;
+                        height: 27px;
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }

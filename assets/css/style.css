@@ -988,35 +988,26 @@ ul {
   color: #282828;
 }
 
-header {
+header .item {
   width: 100%;
   padding: 230px 0px 100px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#917126), to(#282828));
-  background: linear-gradient(-180deg, #917126, #282828);
   position: relative;
   z-index: 99;
   overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-header::after {
+header .item::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../images/pattern.png") center/cover no-repeat;
-  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
-  opacity: .15;
-}
-
-header .owl-item,
-header .owl-stage,
-header .owl-stage-outer,
-header .owl-carousel,
-header .item {
-  width: 100%;
-  height: 100%;
+  z-index: -1;
 }
 
 header .content {
@@ -1032,6 +1023,20 @@ header .content {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+}
+
+header .content img {
+  width: 120px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 25px;
 }
 
 header .content h4 {
@@ -1065,20 +1070,6 @@ header .content .custom-btn:hover {
   color: #fff !important;
 }
 
-header .image-content {
-  width: 100%;
-  height: 390px;
-}
-
-header .image-content img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: left;
-     object-position: left;
-}
-
 header .owl-theme .owl-dots .owl-dot span,
 header .owl-theme .owl-dots .owl-dot.active span,
 header .owl-theme .owl-dots .owl-dot:hover span {
@@ -1089,6 +1080,20 @@ header .owl-theme .owl-dots {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.sub-header {
+  width: 100%;
+  padding: 150px 0px 50px;
+  background-color: #917126;
+}
+
+.sub-header .heading h4 {
+  color: #fff;
+}
+
+.sub-header .heading h4::After, .sub-header .heading h4::before {
+  background: #fff !important;
 }
 
 .about-us {
@@ -1355,6 +1360,52 @@ header .owl-theme .owl-dots {
      object-position: bottom;
 }
 
+.hotels {
+  width: 100%;
+  padding: 40px 0px;
+  background-color: rgba(145, 113, 38, 0.05);
+}
+
+.hotels .box {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  -webkit-transition: all .4s linear;
+  transition: all .4s linear;
+}
+
+.hotels .box:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.hotels .box img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.hotels .box .content {
+  width: 100%;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.hotels .box .content h4 {
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.hotels .box .content .custom-btn {
+  width: 100%;
+}
+
 .gallery {
   width: 100%;
   padding: 60px 0px;
@@ -1525,6 +1576,85 @@ header .owl-theme .owl-dots {
 
 .contact-us .box:hover::after {
   height: 100%;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: #333;
+}
+
+footer .content img {
+  width: 120px;
+  height: 100px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+footer .content p {
+  color: #fff;
+  margin: 20px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+footer .content h4 {
+  color: #917126;
+  font-size: 20px;
+  padding: 55px 0px;
+  font-weight: 900;
+}
+
+footer .content .link li {
+  margin-bottom: 29px;
+}
+
+footer .content .link li a {
+  font-size: 15px;
+  color: #fff;
+}
+
+footer .content .socail-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .content .socail-media li {
+  margin: 0px 0px 0px 15px;
+}
+
+footer .content .socail-media li a {
+  width: 50px;
+  height: 50px;
+  background-color: #917126;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .content .socail-media li a img {
+  width: 27px;
+  height: 27px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .copyrights {
