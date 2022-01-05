@@ -18,7 +18,9 @@
         .brand-name img{
             height: 60px;
         }
-
+        .top-nav{
+            display: none;
+        }
         .nav-item .nav-link{
             color: #282828 !important;
 
@@ -30,6 +32,85 @@
         .hamburger{
             .line{
                 background-color: #917126 !important;
+            }
+        }
+    }
+
+    .top-nav{
+        width: 100%;
+        padding-bottom: 10px;
+
+        .location{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            height: 100%;
+
+            li{
+                padding: 0px 10px;
+                border-inline-end: 1px solid #fff;
+                &:last-child{
+                    border: none;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin-inline-end: 10px;
+                        object-fit: contain;
+                        filter: invert(100%) sepia(1%) saturate(5%) hue-rotate(4deg) brightness(103%) contrast(102%);
+                    }
+
+                    span{
+                        color: #fff;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+
+                    &:hover{
+                        img{
+                            animation: tada .5s both;
+                        }
+                    }
+                }
+            }
+        }
+
+        .socail-media{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: flex-end;
+            height: 100%;
+
+            li{
+                margin: 0px 0px 0px 15px;
+                
+                a{
+                    width: 40px;
+                    height: 40px;
+                    background-color: #917126;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                        object-fit: contain;
+                    }
+
+                    &:hover{
+                        img{
+                            animation: tada .4s both;
+                        }
+                    }
+                }
             }
         }
     }
@@ -189,15 +270,15 @@ header{
 
 .sub-header{
     width: 100%;
-    padding: 150px 0px 50px;
+    padding: 200px 0px 50px;
     background-color: #917126;
 
     .heading{
         h4{
             color: #fff;
 
-            &::After , &::before{
-                background: #fff !important;
+            &::before{
+                background: #917126 url('../images/heading_shape.svg') center/contain no-repeat;
             }
         }
     }
@@ -667,6 +748,43 @@ footer{
                         width: 27px;
                         height: 27px;
                         object-fit: contain;
+                    }
+
+                    &:hover{
+                        img{
+                            animation: tada .4s both;
+                        }
+                    }
+                }
+            }
+        }
+
+        .location{
+
+            li{
+                padding: 0px 0px 40px 0px;
+                a{
+                    display: flex;
+                    align-items: center;
+                    align-content: center;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin-inline-end: 10px;
+                        object-fit: contain;
+                        filter: invert(100%) sepia(1%) saturate(5%) hue-rotate(4deg) brightness(103%) contrast(102%);
+                    }
+
+                    span{
+                        color: #fff;
+                        font-size: 15px;
+                        font-weight: 500;
+                    }
+
+                    &:hover{
+                        img{
+                            animation: tada .5s both;
+                        }
                     }
                 }
             }
